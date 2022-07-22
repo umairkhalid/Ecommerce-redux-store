@@ -1,1 +1,1 @@
-# eShopper-redux-store
+# Ecommerce-redux-store
