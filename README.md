@@ -1,14 +1,20 @@
 # E-commerce Redux Store
 
+![full-stack](https://img.shields.io/badge/MERN-1?label=full-stack&style=for-the-badge&labelColor=orange&color=black)
+
+![MongoDB](https://img.shields.io/badge/-MongoDB-darkgreen) ![Express](https://img.shields.io/badge/-Express-orange) ![React](https://img.shields.io/badge/-React-yellow) ![NodeJS](https://img.shields.io/badge/-NodeJS-darkred)
+
+![Apollo-Client](https://img.shields.io/badge/3.6.9-0?label=Apollo-Client&style=flat-square&labelColor=yellow&color=black) ![GraphQL](https://img.shields.io/badge/16.5.0-0?label=GraphQL&style=flat-square&labelColor=darkred&color=black) ![Stripe](https://img.shields.io/badge/8.67.0-0?label=Stripe&style=flat-square&labelColor=darkgreen&color=black) ![mongoose](https://img.shields.io/badge/5.9.10-0?label=mongoose&style=flat-square&labelColor=darkblue&color=black)
+
 ## Description
 
-In this unit, you learned how to manage global state using React’s Context API. The Context API is quickly gaining traction as a worthy alternative or perhaps even successor to other libraries that manage global state in tandem with React, such as Flux or MobX. Nonetheless, the open source JavaScript library Redux remains the industry standard for managing complex state in a large-scale React application, and you’ll likely encounter it on the job.
+This project is part of a challenge to refactor the e-commerce platform so that it uses [Redux](https://redux.js.org/).
 
-Your challenge this week is to refactor the e-commerce platform from [Activity 26](../01-Activities/26-Stu_Actions-Reducers/Unsolved) so that it uses [Redux](https://redux.js.org/). You won’t need to make sweeping changes to the code, but you will need to read through the Redux documentation on your own to find the information you need. Some guidelines have been provided in the Getting Started section to point you in the right direction. If you haven't yet, download the [e-commerce platform code from Activity 26](http://static.fullstack-bootcamp.com/fullstack-ground/unit-22/26-Stu_Actions-Reducers.zip).
+Originally, the project was managed via global state using React’s Context API. 
 
-**On the Job**: Web developers frequently have to immerse themselves in a new technology to solve a problem, with only that tool’s documentation for help. They must sift through it to find the information that matches the specific problem they’re trying to solve. This assignment will allow you to practice a skill that you’ll use many times over the course of your career.
+The Context API is quickly gaining traction as a worthy alternative or perhaps even successor to other libraries that manage global state in tandem with React, such as Flux or MobX. Nonetheless, the open source JavaScript library Redux remains the industry standard for managing complex state in a large-scale React application.
 
-Remember, this unit's Homework is **optional**. It is not required for submission and your final grade will not be affected in any way. This Homework is an opportunity for you to further practice your skills and get feedback on it.
+It doesn't  make sweeping changes to the code, rather it uses the Redux store to manage state via `react-redux` state management hooks.
 
 ## User Story
 
@@ -36,97 +42,76 @@ THEN I find that the app uses Redux instead of the Context API
 
 ## Mock-Up
 
-This section reviews the web application's general appearance and functionality.
+Following demo reviews the web application's general appearance and functionality.
 
-The following animation shows how a user can register using the Signup page and then navigate to the Products page:
+![This section reviews the web application's general appearance and functionality](./client/public/images/app_demo.gif)
 
-![A user registers on the Signup page and then navigates to the Products page, which displays images and descriptions of products.](./Assets/22-state-homework-demo-01.gif)
+## Table of Contents
 
-The following animation shows how the user can select a category, choose a product, view details about it on the product page, and add and remove it from their shopping cart:
+- [Technologies](#technologies)
+- [Usage](#usage)
+- [License](#license)
+- [Questions](#questions)
 
-![The user selects a category, chooses a product, views details about it on the product page, and adds it to and removes it from their shopping cart.](./Assets/22-state-homework-demo-02.gif)
+## [Technologies](#table-of-contents)
+---
 
-Finally, the user can check out by going to their shopping cart, as shown in the following animation:
+- `M`ongoDB (Mongoose)
+- `E`xpress
+- `R`eact
+- `N`odeJS
+- GraphQL
+- Apollo Server
+- Apollo Client 3.0
+- Stripe
+- Bcrypt
+- Json Webtokens
+- Concurrently
+- JavaScript
+- React-Bootstrap
+- HTML
+- Deployed on GitHub Pages
 
-![The user checks out by going to their shopping cart.](./Assets/22-state-homework-demo-03.gif)
+## [Usage](#table-of-contents)
+---
 
-## Getting Started
+- The app is deployed at: https://mern-shopping-redux.herokuapp.com/
+- The repo is at: https://github.com/umairkhalid/Ecommerce-redux-store/
 
-For instructions to add Redux to your application, refer to the [Redux Fundamentals basic tutorial](https://redux.js.org/basics/basic-tutorial). Note that the documentation will refer to additional packages that you'll need to complete this implementation.
 
-Be sure to review ALL of the documentation, because there are newer methods that can make these tools much easier to implement. React has gone through several iterations; as such, some React-and-Redux tutorials will assume that you aren't using Hooks.
 
-You'll use the Stripe API to process payments, which includes making front-end and back-end changes. Don't worry, Stripe provides test credentials, so you won't need to use a real credit card to try it out. Refer to the [Stripe docs on testing your integration](https://stripe.com/docs/testing).
+```sh
+git clone git@github.com:umairkhalid/Ecommerce-redux-store.git
 
-**Important**: The homework requires a specific version `(>=7.0)` of `npm` in order to install peer dependencies like GraphQL when deploying to Heroku. By default, Heroku uses `npm 6.x`, which may cause some issues. Be sure to refer to the [Heroku Docs on Specifying an NPM Version](https://devcenter.heroku.com/articles/nodejs-support#specifying-an-npm-version) to ensure your `package.json` file is set up correctly, as shown in the following snippet:
+cd Ecommerce-redux-store
+```
 
-  ```json
-  {
-    "engines": {
-      "npm": "7.x"
-    }
-  }
-  ```
+### Install dependencies
 
-## Grading Requirements
+```sh
+npm install
+```
 
-> **Note**: If a homework assignment submission is marked as “0”, it is considered incomplete and will not count towards your graduation requirements. Examples of incomplete submissions include the following:
->
-> * A repository that has no code
->
-> * A repository that includes a unique name but nothing else
->
-> * A repository that includes only a README file but nothing else
->
-> * A repository that only includes starter code
+### Seed the data
 
-This homework is graded based on the following criteria:
+```sh
+npm run seed
+```
 
-### Technical Acceptance Criteria: 40%
+### Start the app
 
-* Satisfies all of the preceding acceptance criteria plus the following:
+```sh
+npm run develop
+```
+## [License](#table-of-contents)
 
-  * Retains all the functionality of the original application.
+The application is covered under the following license: [MIT](https://choosealicense.com/licenses/mit/)
 
-  * Application must be deployed to Heroku.
+## [Questions](#table-of-contents)
 
-### Deployment: 32%
+If you have any question about the repo, open an issue or complete the form at [Contact](https://umairkhalid.github.io/react-portfolio/#contact).
 
-* Application deployed at live URL.
+You can find more of my work at [GitHub](https://github.com/umairkhalid).
 
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository contains application code.
-
-### Application Quality: 15%
-
-* User experience is intuitive and easy to navigate.
-
-* User interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the Challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains high-quality README file with description, screenshot, and link to the deployed application.
-
-## Review
-
-You are required to submit BOTH of the following for review:
-
-* The URL of the functional, deployed application.
-
-* The URL of the GitHub repository, with a unique name and a README describing the project.
-
-- - -
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+---
+© 2022 Umair Khalid. Confidential and Proprietary. All Rights Reserved.
