@@ -40,7 +40,7 @@ WHEN I review the way the app dispatches actions
 THEN I find that the app uses Redux instead of the Context API
 ```
 
-## Mock-Up
+## Demo
 
 Following demo reviews the web application's general appearance and functionality.
 
